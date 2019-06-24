@@ -29,8 +29,11 @@
     ]
   },
   "devDependencies": {
+    "check-prop-types": "^1.1.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "react-test-renderer": "^16.8.6"
+    "prop-types": "^15.6.0",
+    "react-test-renderer": "^16.8.6",
+    "typescript": "^3.5.2"
   }
 }
