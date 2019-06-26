@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
+import axios from 'axios';
 import App from '../components/App.js';
 import SearchBar from '../components/SearchBar.js';
 import BookList from '../components/BookList.js';
