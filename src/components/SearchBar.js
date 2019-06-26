@@ -15,9 +15,13 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.onFormSubmit}>
-          <label>Book Search</label>
-          <input type="text" onChange={this.onInputChange} />
+        <form className="form-group" onSubmit={this.onFormSubmit}>
+          <h2>Book Search:</h2>
+          <input
+            className="form-control-lg"
+            type="text"
+            onChange={this.onInputChange}
+            placeholder="Enter search term" />
         </form>
       </div>
     );

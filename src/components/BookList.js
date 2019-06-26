@@ -8,11 +8,11 @@ const BookList = ({ books }) => {
       return <Book key={book.id} book={book} />;
     });
   } else {
-    renderedList = 'No books were found'
+    renderedList = 'No books were found!';
   }
 
   return (
-    <div>
+    <div className="container">
       {renderedList}
     </div>
   );

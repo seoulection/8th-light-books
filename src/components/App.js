@@ -18,9 +18,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <SearchBar onFormSubmit={this.onTermSubmit} />
-        <BookList books={this.state.books} />
+      <div className="container">
+        <div className="row justify-content-md-center">
+          <SearchBar onFormSubmit={this.onTermSubmit} />
+          <BookList books={this.state.books} />
+        </div>
       </div>
     );
   }
