@@ -1,13 +1,13 @@
 import React from 'react';
 import SearchBar from './SearchBar.js';
 import BookList from './BookList.js';
-import googleBooks from '../apis/googleBooks';
+import google from '../apis/google';
 
 class App extends React.Component {
   state = { books: [] };
 
   onTermSubmit = async term => {
-    const response = await googleBooks.get('/volumes', {
+    const response = await google.get('/volumes', {
       params: {
         q: term,
         maxResults: 40
