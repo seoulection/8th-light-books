@@ -19,8 +19,8 @@ describe('SearchBar', () => {
     expect(wrapper.find('form').length).toEqual(1);
   });
 
-  it('should render a Book Search label', () => {
-    expect(wrapper.find('label').text()).toBe('Book Search');
+  it('should render a Book Search h2 element', () => {
+    expect(wrapper.find('h2').text()).toBe('Book Search:');
   });
 
   it('should render an input element', () => {

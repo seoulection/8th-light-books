@@ -1,6 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
-import axios from 'axios';
+import { shallow } from 'enzyme';
 import App from '../components/App.js';
 import SearchBar from '../components/SearchBar.js';
 import BookList from '../components/BookList.js';
@@ -11,7 +10,7 @@ describe('App', () => {
   beforeEach(() => wrapper = shallow(<App />));
 
   it('should render a <div />', () => {
-    expect(wrapper.find('div').length).toEqual(1);
+    expect(wrapper.find('div').length).toEqual(2);
   });
 
   it('should render the SearchBar component', () => {
