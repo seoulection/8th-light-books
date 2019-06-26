@@ -1,7 +1,21 @@
 import React from 'react';
+import Book from './Book';
 
-const BookList = () => {
-  return <div>BookList</div>;
+const BookList = ({ books }) => {
+  let renderedList;
+  if (books) {
+    renderedList = books.map((book) => {
+      return <Book key={book.id} book={book} />;
+    });
+  } else {
+    renderedList = 'No books were found'
+  }
+
+  return (
+    <div>
+      {renderedList}
+    </div>
+  );
 }
 
 export default BookList;
