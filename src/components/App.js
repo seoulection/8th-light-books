@@ -7,10 +7,11 @@ class App extends React.Component {
   state = { books: [] };
 
   onTermSubmit = async term => {
+    const numberOfMaxResults = 40;
     const response = await google.get('/volumes', {
       params: {
         q: term,
-        maxResults: 40
+        maxResults: numberOfMaxResults
       }
     });
     this.setState({ books: response.data.items });
