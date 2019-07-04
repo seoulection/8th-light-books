@@ -1,5 +1,7 @@
 import React from 'react';
 
+const PLACEHOLDER = 'Enter search term';
+
 class SearchBar extends React.Component {
   state = { term: '' };
 
@@ -21,7 +23,7 @@ class SearchBar extends React.Component {
             className="form-control-lg"
             type="text"
             onChange={this.onInputChange}
-            placeholder="Enter search term" />
+            placeholder={PLACEHOLDER} />
         </form>
       </div>
     );

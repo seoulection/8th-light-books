@@ -3,15 +3,17 @@ import SearchBar from './SearchBar.js';
 import BookList from './BookList.js';
 import google from '../apis/google';
 
+const MAX_RESULTS = 40;
+const REQUEST_URL = '/volumes';
+
 class App extends React.Component {
   state = { books: [] };
 
   onTermSubmit = async term => {
-    const numberOfMaxResults = 40;
-    const response = await google.get('/volumes', {
+    const response = await google.get(REQUEST_URL, {
       params: {
         q: term,
-        maxResults: numberOfMaxResults
+        maxResults: MAX_RESULTS
       }
     });
     this.setState({ books: response.data.items });

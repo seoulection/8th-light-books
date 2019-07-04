@@ -1,7 +1,7 @@
 import React from 'react';
 import Book from './Book';
 
-const noBooksFound = 'No books were found!';
+const NOT_FOUND = 'No books were found!';
 
 const BookList = ({ books }) => {
   let renderedList;
@@ -10,7 +10,7 @@ const BookList = ({ books }) => {
       return <Book key={book.id} book={book} />;
     });
   } else {
-    renderedList = noBooksFound;
+    renderedList = NOT_FOUND;
   }
 
   return (
