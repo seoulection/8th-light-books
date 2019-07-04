@@ -7,7 +7,7 @@ const BookList = ({ books }) => {
   let renderedList;
   if (books) {
     renderedList = books.map((book) => {
-      return <Book key={book.id} book={book} />;
+      return <Book key={book.etag} book={book} />;
     });
   } else {
     renderedList = NOT_FOUND;
