@@ -4,13 +4,13 @@ import BookList from './BookList.js';
 import google from '../apis/google';
 
 const MAX_RESULTS = 40;
-const REQUEST_URL = '/volumes';
+const VOLUMES_URI = '/volumes';
 
 class App extends React.Component {
   state = { books: [] };
 
   onTermSubmit = async term => {
-    const response = await google.get(REQUEST_URL, {
+    const response = await google.get(VOLUMES_URI, {
       params: {
         q: term,
         maxResults: MAX_RESULTS

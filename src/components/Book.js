@@ -7,6 +7,8 @@ const IMAGE_ALT = 'not-found';
 const NO_TITLE = 'Untitled';
 const NO_AUTHORS = 'No Author(s)';
 const NO_PUBLISHER = 'No Publisher';
+const SECURE_HTTP = 'https://';
+const UNSECURE_HTTP = 'http://';
 
 const Book = ({ book: { volumeInfo: { imageLinks, title, authors, publisher, infoLink } } }) => {
 
@@ -20,7 +22,7 @@ const Book = ({ book: { volumeInfo: { imageLinks, title, authors, publisher, inf
       <div className="media d-flex justify-content-center">
         <img
           className="mr-3"
-          src={imageLinks ? imageLinks.smallThumbnail.replace('http://', 'https://') : noImage}
+          src={imageLinks ? imageLinks.smallThumbnail.replace(UNSECURE_HTTP, SECURE_HTTP) : noImage}
           alt={IMAGE_ALT}
           style={imageStyle}
         />
@@ -28,7 +30,7 @@ const Book = ({ book: { volumeInfo: { imageLinks, title, authors, publisher, inf
           <h1>Title: {title ? title : NO_TITLE}</h1>
           <h4>Author(s): {authors ? authors.join(', ') : NO_AUTHORS}</h4>
           <h5>Publisher: {publisher ? publisher : NO_PUBLISHER}</h5>
-          <a target="_blank" rel="noopener noreferrer" href={infoLink.replace('http://', 'https://')}>More info</a>
+          <a target="_blank" rel="noopener noreferrer" href={infoLink.replace(UNSECURE_HTTP, SECURE_HTTP)}>More info</a>
         </div>
       </div>
     </div>
